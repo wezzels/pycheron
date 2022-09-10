@@ -25,3 +25,4 @@ pycheron/coverage_reports/.coverage.
 pycheron/coverage_reports/htmlconv
 *.env
 docs/build/
+dist/

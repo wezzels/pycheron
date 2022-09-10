@@ -31,7 +31,7 @@ import dash
 import json
 import os
 import dash_table
-import dash_html_components as html
+import dash as html
 import dash_core_components as dcc
 import plotly.express as px
 import pandas as pd

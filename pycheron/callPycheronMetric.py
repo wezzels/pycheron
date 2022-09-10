@@ -2947,7 +2947,6 @@ def _call_pycheron_wrapper(
             ),
         )
         t_dc.start()
-
         # deadChanADFMetric
         t_dc.join()
         st_dcADF = st.copy()
@@ -2968,7 +2967,6 @@ def _call_pycheron_wrapper(
             ),
         )
         t_dc.start()
-
         # deadChanMeanMetric
         t_dc.join()
         st_dcM = st.copy()
@@ -2987,7 +2985,7 @@ def _call_pycheron_wrapper(
             ),
         )
         t_dc.start()
-
+        
     # # ----------------------calibration-------------------------------------------
     if calcAll or calcCal:
         st_cal = st.copy()
@@ -3064,7 +3062,7 @@ def _call_pycheron_wrapper(
         t_mrm.start()
 
     # # ----------------------plots--------------------------------
-
+    print("Made it to plots.")
     if plots:
         if calcAll:
             t_amp.join()
@@ -4063,7 +4061,7 @@ def main():
 
         if config.split(".")[-1] == "yaml":
             with open(config, "r") as ymlfile:
-                cfg = yaml.load(ymlfile)
+                cfg = yaml.load(ymlfile, Loader=yaml.FullLoader)
         else:
             print("Error: config file must be yaml")
             return
