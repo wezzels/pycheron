@@ -45,7 +45,7 @@ import numpy as np
 import pandas as pd  # Dataset reading
 import sklearn  # Machine learning algorithms
 import joblib
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble._forest import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 import imblearn  # Data Augmentation and Balancing
